@@ -20,6 +20,12 @@
 #include "bpf_nat_tuples.h"
 #include "scapy.h"
 
+/* Set port ranges to have deterministic source port selection */
+ASSIGN_CONFIG(__u16, nodeport_port_min, 30000)
+ASSIGN_CONFIG(__u16, nodeport_port_max, 32767)
+ASSIGN_CONFIG(__u16, nodeport_port_min_nat, 32768)
+ASSIGN_CONFIG(__u16, nodeport_port_max_nat, 65535)
+
 /* IP addresses mapping to Scapy definitions (in host byte order):
  * v4_node_one   = "10.0.10.1"  -> IP_ENDPOINT (node/endpoint)
  * v4_pod_one    = "192.168.0.1" -> IP_HOST (pod being SNATed)

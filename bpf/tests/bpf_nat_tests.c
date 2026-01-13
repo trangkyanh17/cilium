@@ -20,6 +20,12 @@
 
 #include "bpf_nat_tuples.h"
 
+/* Set port ranges to have deterministic source port selection */
+ASSIGN_CONFIG(__u16, nodeport_port_min, 30000)
+ASSIGN_CONFIG(__u16, nodeport_port_max, 32767)
+ASSIGN_CONFIG(__u16, nodeport_port_min_nat, 32768)
+ASSIGN_CONFIG(__u16, nodeport_port_max_nat, 65535)
+
 #define IP_ENDPOINT 1
 #define IP_HOST     2
 #define IP_ROUTER   3
