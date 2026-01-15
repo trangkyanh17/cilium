@@ -10,6 +10,11 @@
 #include "lib/ipv6.h"
 #include "lib/l4.h"
 
+#define TUNNEL_PROTOCOL_VXLAN 1
+#define TUNNEL_PROTOCOL_GENEVE 2
+DECLARE_CONFIG(__u8, tunnel_protocol, "Tunnel protocol")
+DECLARE_CONFIG(__u16, tunnel_port, "Tunnel port")
+
 typedef __u8 cls_flags_t;
 
 /* Classification flags used to enrich trace/drop notifications events. */

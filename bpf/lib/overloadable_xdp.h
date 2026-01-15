@@ -6,6 +6,8 @@
 #include <linux/udp.h>
 #include <linux/ip.h>
 
+#include "classifiers.h"
+
 static __always_inline __maybe_unused void
 bpf_clear_meta(struct xdp_md *ctx __maybe_unused)
 {

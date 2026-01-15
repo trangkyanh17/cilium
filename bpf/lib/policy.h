@@ -6,6 +6,7 @@
 #include <linux/icmp.h>
 
 #include "common.h"
+#include "classifiers.h"
 #include "dbg.h"
 
 DECLARE_CONFIG(bool, allow_icmp_frag_needed,
